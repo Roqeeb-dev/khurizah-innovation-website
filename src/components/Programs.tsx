@@ -8,6 +8,7 @@ import {
   Scissors,
   Mic,
   PenTool,
+  Palette,
   Home,
   Truck,
 } from "lucide-react";
@@ -19,6 +20,7 @@ import cateringImage from "../assets/catering-image.jpg";
 import ghostWritingImage from "../assets/ghost-writing-image.jpg";
 import dataAnalyticsImage from "../assets/data-analytics-image.jpg";
 import realEstateImage from "../assets/real-estate-image.jpg";
+import graphicImage from "../assets/graphic-design-image.jpg";
 import { Link } from "react-router-dom";
 
 interface Program {
@@ -94,6 +96,14 @@ export default function Programs() {
         "Hands-on training in automotive repair and maintenance. Learn diagnostics, servicing, and troubleshooting to become a skilled auto technician.",
       link: "",
       icon: Truck,
+    },
+    {
+      cover: graphicImage,
+      title: "Graphics Design",
+      description:
+        "Learn to create stunning visuals for digital and print media. Master tools like Photoshop, Illustrator, and Figma to bring your creative ideas to life.",
+      link: "",
+      icon: Palette,
     },
   ];
 
