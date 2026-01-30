@@ -14,14 +14,13 @@ export default function Navbar() {
     { text: "Contact", to: "/contact" },
   ];
   return (
-    <header className="sticky top-0 z-50 max-w-[1400px] mx-auto text-white py-5 px-6 flex items-center justify-between backdrop-blur-md bg-white/10 border-b border-white/10">
+    <header className="sticky top-0 z-50 text-white py-4 px-9 flex items-center justify-between bg-blue-800/90 border-b border-blue-900/30">
       <div className="flex items-center gap-2 group">
         <Helicopter className="w-6 h-6 text-blue-300 group-hover:text-blue-200 transition-colors" />
         <span className="text-2xl font-semibold tracking-tight">
           Khurizah Innovation
         </span>
       </div>
-
       <ul className="flex gap-8">
         {links.map((link) => (
           <NavLink
@@ -38,7 +37,6 @@ export default function Navbar() {
           </NavLink>
         ))}
       </ul>
-
       <button className="bg-white text-blue-900 rounded-2xl px-6 py-2.5 font-medium shadow-md hover:shadow-lg hover:bg-blue-50 transition-all duration-300">
         Sign Up
       </button>
