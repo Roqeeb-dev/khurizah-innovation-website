@@ -1,5 +1,12 @@
-function App() {
-  return <h1 className="text-3xl text-red-500">Hello world</h1>;
-}
+import Landing from "./pages/Landing";
+import { Route, Routes } from "react-router-dom";
 
-export default App;
+export default function App() {
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+      </Routes>
+    </>
+  );
+}
