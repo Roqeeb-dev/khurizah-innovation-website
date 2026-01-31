@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Helicopter } from "lucide-react";
+import { Lightbulb } from "lucide-react";
 
 interface Link {
   text: string;
@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 text-white py-4 px-9 flex items-center justify-between bg-blue-800/90 border-b border-blue-900/30">
       <div className="flex items-center gap-2 group">
-        <Helicopter className="w-6 h-6 text-blue-300 group-hover:text-blue-200 transition-colors" />
+        <Lightbulb className="w-6 h-6 text-blue-300 group-hover:text-blue-200 transition-colors" />
         <span className="text-2xl font-semibold tracking-tight">
           Khurizah Innovation
         </span>

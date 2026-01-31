@@ -51,7 +51,7 @@ export default function Programs() {
     },
     {
       cover: dataAnalyticsImage,
-      title: "Data Analysis",
+      title: "Data Analytics",
       description:
         "Analyze and interpret data to drive informed decisions. Learn tools like Excel, SQL, and data visualization techniques for real-world business insights.",
       link: "",
@@ -125,7 +125,7 @@ export default function Programs() {
       </section>
 
       {/* Programs grid */}
-      <section className="grid grid-cols-3 gap-10 px-20">
+      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-20">
         {programs.map((obj) => {
           const Icon = obj.icon;
           return (
