@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Helicopter } from "lucide-react";
+import { Lightbulb } from "lucide-react";
 
 interface Link {
   text: string;
@@ -14,21 +14,30 @@ export default function Navbar() {
     { text: "Contact", to: "/contact" },
   ];
   return (
-    <header className="max-w-[1400px] mx-auto text-white py-4 flex items-center justify-between">
-      <div className="flex items-center gap-2">
-        <Helicopter />
-        <span className="text-2xl font-base">Khurizah Innovation</span>
+    <header className="sticky top-0 z-50 text-white py-4 px-9 flex items-center justify-between bg-blue-800/90 border-b border-blue-900/30">
+      <div className="flex items-center gap-2 group">
+        <Lightbulb className="w-6 h-6 text-blue-300 group-hover:text-blue-200 transition-colors" />
+        <span className="text-2xl font-semibold tracking-tight">
+          Khurizah Innovation
+        </span>
       </div>
-
       <ul className="flex gap-8">
         {links.map((link) => (
-          <NavLink to={link.to} className="text-lg hover:text-blue-100">
+          <NavLink
+            key={link.to}
+            to={link.to}
+            className={({ isActive }) =>
+              `
+          text-lg font-medium transition-colors duration-300
+          ${isActive ? "text-blue-200" : "text-white/80 hover:text-white"}
+          `
+            }
+          >
             {link.text}
           </NavLink>
         ))}
       </ul>
-
-      <button className="bg-white text-blue-800 rounded-2xl px-4 py-2 hover:text-blue-900 hover:bg-blue-100 transition">
+      <button className="bg-white text-blue-900 rounded-2xl px-6 py-2.5 font-medium shadow-md hover:shadow-lg hover:bg-blue-50 transition-all duration-300">
         Sign Up
       </button>
     </header>
