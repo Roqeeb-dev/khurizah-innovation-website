@@ -111,7 +111,7 @@ export default function Programs() {
     <main className="bg-white min-h-[50vh] py-10">
       <section className="flex flex-col items-center py-12 px-6 text-center">
         {/* Pill / Badge */}
-        <Pill message="Our Programs" icon={NotebookTabs} color="bg-black/90" />
+        <Pill message="Our Programs" icon={NotebookTabs} />
 
         <h1 className="mt-6 text-5xl font-semibold tracking-tight text-gray-900">
           What We Offer

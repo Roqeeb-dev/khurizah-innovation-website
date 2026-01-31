@@ -1,4 +1,4 @@
-import { Plane } from "lucide-react";
+import { Plane, ArrowRight } from "lucide-react";
 import image from "../assets/hero-image.jpg";
 
 export default function Hero() {
@@ -24,8 +24,9 @@ export default function Hero() {
         </p>
 
         <div className="flex items-center space-x-4">
-          <button className="bg-white text-blue-900 rounded-2xl px-6 py-3 font-medium shadow-md hover:shadow-lg hover:bg-blue-50 transition-all duration-300">
-            View Programs
+          <button className="bg-white text-blue-900 rounded-2xl flex items-center space-x-2 px-6 py-3 font-medium shadow-md hover:shadow-lg hover:bg-blue-50 transition-all duration-300">
+            <span>View Programs</span>
+            <ArrowRight className="w-5 h-5" />
           </button>
           <button className="bg-blue-600 text-white rounded-2xl px-6 py-3 font-medium shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300">
             Get Started
