@@ -1,5 +1,6 @@
 import type { ElementType } from "react";
 import Pill from "./Pill";
+import Stats from "./Stats";
 import {
   Clock,
   Wrench,
@@ -125,8 +126,8 @@ export default function WhyUs() {
   };
 
   return (
-    <main className="bg-cyan-100 min-h-[50vh] py-10">
-      <section className="flex flex-col items-center py-12 px-6 text-center">
+    <main className="bg-gray-100 min-h-[50vh] py-10">
+      <section className="flex flex-col items-center py-7 px-6 text-center">
         {/* Pill / Badge */}
         <Pill message="Why Us" icon={Lightbulb} />
 
@@ -146,35 +147,41 @@ export default function WhyUs() {
           const styles = colorStyles[reason.color];
 
           return (
-            <div key={index} className="bg-white p-5 rounded-lg">
+            <div
+              key={index}
+              className="group relative bg-white p-6 rounded-xl border border-black/10 transition-all hover:-translate-y-1 hover:border-black/20 hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)]"
+            >
+              {/* Tech accent line */}
+              <div
+                className={`absolute left-0 top-0 h-full w-1 ${styles.iconBg}`}
+              />
+
               {/* Header */}
               <div className="flex items-start gap-4">
                 <div
-                  className={`
-              ${styles.iconBg}
-              ${styles.text}
-              w-12 h-12
-              rounded-xl
-              flex items-center justify-center
-              shrink-0
-            `}
+                  className={`${styles.iconBg} ${styles.text} w-11 h-11 rounded-lg flex items-center justify-center shrink-0 ring-1 ring-black/10 transition group-hover:scale-105`}
                 >
-                  <Icon className="w-6 h-6" />
+                  <Icon className="w-5 h-5" />
                 </div>
 
-                <h3 className="text-lg font-semibold text-gray-900 leading-snug">
+                <h3 className="text-lg font-semibold text-gray-900 leading-snug tracking-tight">
                   {reason.title}
                 </h3>
               </div>
 
+              {/* Divider */}
+              <div className="mt-4 h-px w-full bg-gradient-to-r from-black/10 to-transparent" />
+
               {/* Description */}
-              <p className="mt-4 text-sm leading-relaxed text-gray-600 max-w-[90%]">
+              <p className="mt-4 text-sm leading-relaxed text-gray-600">
                 {reason.description}
               </p>
             </div>
           );
         })}
       </section>
+
+      <Stats />
     </main>
   );
 }
