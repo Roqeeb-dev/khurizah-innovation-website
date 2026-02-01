@@ -1,8 +1,10 @@
+import bgImage from "../assets/shridhar-thorat-6AKLKt-KmdY-unsplash.jpg";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Programs from "../components/Programs";
 import WhyUs from "../components/WhyUs";
-import bgImage from "../assets/shridhar-thorat-6AKLKt-KmdY-unsplash.jpg";
+import Testimonials from "../components/Testimonials";
+import CTA from "../components/CTA";
 
 export default function Landing() {
   return (
@@ -18,6 +20,8 @@ export default function Landing() {
         <Hero />
         <Programs />
         <WhyUs />
+        <Testimonials />
+        <CTA />
       </div>
     </main>
   );
