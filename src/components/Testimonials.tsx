@@ -52,6 +52,12 @@ export default function Testimonials() {
       : setCurrentIndex(currentIndex + 1);
   }
 
+  function decrementIndex() {
+    currentIndex === 0
+      ? setCurrentIndex(testimonials.length - 1)
+      : setCurrentIndex(currentIndex - 1);
+  }
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-700">
       <section className="flex flex-col text-white items-center py-7 px-6 text-center">
@@ -68,7 +74,7 @@ export default function Testimonials() {
       </section>
 
       {/* testimonials */}
-      <section className="max-w-6xl mx-auto my-5 bg-white p-8 rounded-[50px]">
+      <section className="max-w-6xl mx-auto my-5 bg-white p-6 rounded-[50px]">
         <article className="flex items-center p-6 space-x-7">
           {/* left image */}
           <div className="max-w-sm">
@@ -93,13 +99,13 @@ export default function Testimonials() {
             {/* control buttons */}
             <div className="flex items-center space-x-5">
               <ChevronLeft
-                onClick={() => setCurrentIndex(currentIndex - 1)}
+                onClick={decrementIndex}
                 className="bg-gray-200 hover:bg-gray-300 p-2 w-12 h-12 rounded-full"
               />
               <div className="flex items-center space-x-2">
                 {testimonials.map((t, index) => (
                   <div
-                    key={index}
+                    key={t.name}
                     className={`h-2 rounded-full transition ${index === currentIndex ? "bg-blue-600 w-4" : "bg-gray-400  w-2"}`}
                   ></div>
                 ))}
