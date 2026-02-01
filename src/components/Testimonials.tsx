@@ -47,10 +47,9 @@ export default function Testimonials() {
   const displayedTestimonial = testimonials[currentIndex];
 
   function incrementIndex() {
-    if (currentIndex === testimonials.length) {
-      setCurrentIndex(testimonials.length % currentIndex);
-    }
-    setCurrentIndex(currentIndex + 1);
+    currentIndex >= testimonials.length - 1
+      ? setCurrentIndex(0)
+      : setCurrentIndex(currentIndex + 1);
   }
 
   return (
@@ -101,7 +100,7 @@ export default function Testimonials() {
                 {testimonials.map((t, index) => (
                   <div
                     key={index}
-                    className={`h-2 w-2 rounded-full ${index === currentIndex ? "bg-blue-600" : "bg-gray-400"}`}
+                    className={`h-2 rounded-full transition ${index === currentIndex ? "bg-blue-600 w-4" : "bg-gray-400  w-2"}`}
                   ></div>
                 ))}
               </div>
