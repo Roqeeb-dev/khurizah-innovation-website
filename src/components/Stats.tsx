@@ -22,7 +22,7 @@ export default function Stats() {
     },
   ];
   return (
-    <section className="max-w-5xl mx-auto mt-10 rounded-3xl bg-gradient-to-br from-blue-700 via-blue-600 to-indigo-700 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-8 py-14 shadow-xl">
+    <section className="max-w-6xl mx-auto mt-10 rounded-3xl bg-gradient-to-br from-blue-700 via-blue-600 to-indigo-700 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-8 py-14 shadow-xl">
       {stats.map(({ count, label }, index) => (
         <div
           key={index}
