@@ -1,7 +1,149 @@
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  MapPin,
+  Phone,
+  Mail,
+} from "lucide-react";
+
 export default function Footer() {
   return (
-    <div>
-      <h1>Footer</h1>
-    </div>
+    <footer className="bg-gradient-to-br from-black via-slate-900 to-blue-950 text-gray-300">
+      <div className="max-w-7xl mx-auto py-20">
+        {/* Top section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Brand */}
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-blue-500 text-2xl">✦</span>
+              <h2 className="text-white text-xl font-semibold">
+                Khurizah Innovation
+              </h2>
+            </div>
+
+            <p className="text-sm leading-relaxed mb-6">
+              Empowering you through skills and innovation. Transform your
+              future with our world-class training programs.
+            </p>
+
+            <div className="flex items-center gap-3">
+              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
+                <div
+                  key={i}
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600/20 hover:bg-blue-600 transition cursor-pointer"
+                >
+                  <Icon size={18} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-3 text-sm">
+              {[
+                "Our Programs",
+                "About Us",
+                "Success Stories",
+                "Blog",
+                "FAQs",
+              ].map((link) => (
+                <li
+                  key={link}
+                  className="hover:text-white transition cursor-pointer"
+                >
+                  {link}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Programs */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Programs</h3>
+            <ul className="space-y-3 text-sm">
+              {[
+                "Web Development",
+                "Catering",
+                "Forex Trading",
+                "Fashion Designing",
+                "Graphic Design",
+              ].map((program) => (
+                <li
+                  key={program}
+                  className="hover:text-white transition cursor-pointer"
+                >
+                  {program}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Contact Us</h3>
+            <ul className="space-y-4 text-sm">
+              <li className="flex items-start gap-3">
+                <MapPin size={18} className="text-blue-500 mt-1" />
+                <span>123 Innovation Street, Lagos, Nigeria</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone size={18} className="text-blue-500" />
+                <span>+234 (0) 123 456 7890</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail size={18} className="text-blue-500" />
+                <span>info@khurizahinnovation.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <hr className="border-white/10 my-16" />
+
+        {/* Newsletter */}
+        <div className="text-center max-w-2xl mx-auto">
+          <h3 className="text-white text-2xl font-semibold mb-2">
+            Stay Updated
+          </h3>
+          <p className="text-sm mb-6">
+            Subscribe to our newsletter for the latest updates and exclusive
+            offers
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="w-full px-5 py-3 rounded-full bg-white/10 border border-white/10 outline-none focus:ring-2 focus:ring-blue-600"
+            />
+            <button className="px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition">
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="mt-16 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400 gap-4">
+          <p>© 2026 Khurizah Innovation. All rights reserved.</p>
+
+          <div className="flex items-center gap-6">
+            <span className="hover:text-white cursor-pointer">
+              Privacy Policy
+            </span>
+            <span className="hover:text-white cursor-pointer">
+              Terms of Service
+            </span>
+            <span className="hover:text-white cursor-pointer">
+              Cookie Policy
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 }

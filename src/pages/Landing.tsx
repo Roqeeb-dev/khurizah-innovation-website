@@ -5,6 +5,7 @@ import Programs from "../components/Programs";
 import WhyUs from "../components/WhyUs";
 import Testimonials from "../components/Testimonials";
 import CTA from "../components/CTA";
+import Footer from "../components/Footer";
 
 export default function Landing() {
   return (
@@ -22,6 +23,7 @@ export default function Landing() {
         <WhyUs />
         <Testimonials />
         <CTA />
+        <Footer />
       </div>
     </main>
   );
