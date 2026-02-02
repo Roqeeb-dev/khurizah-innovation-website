@@ -126,7 +126,7 @@ export default function WhyUs() {
   };
 
   return (
-    <main className="bg-gray-100 min-h-[50vh] py-10">
+    <main id="about" className="bg-gray-100 min-h-[50vh] py-10">
       <section className="flex flex-col items-center py-7 px-6 text-center">
         {/* Pill / Badge */}
         <Pill message="Why Us" icon={Lightbulb} />

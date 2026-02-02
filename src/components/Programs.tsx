@@ -5,7 +5,7 @@ import { programs } from "../ProgramData";
 
 export default function Programs() {
   return (
-    <main className="bg-white min-h-[50vh] py-10">
+    <main id="programs" className="bg-white min-h-[50vh] py-10">
       <section className="flex flex-col items-center py-12 px-6 text-center">
         {/* Pill / Badge */}
         <Pill message="Our Programs" icon={NotebookTabs} />

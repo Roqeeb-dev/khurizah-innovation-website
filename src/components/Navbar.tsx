@@ -8,10 +8,10 @@ interface Link {
 
 export default function Navbar() {
   const links: Link[] = [
-    { text: "Programs", to: "/programs" },
-    { text: "About", to: "/about" },
-    { text: "Testimonials", to: "/testimonials" },
-    { text: "Contact", to: "/contact" },
+    { text: "Programs", to: "programs" },
+    { text: "About", to: "about" },
+    { text: "Testimonials", to: "testimonials" },
+    { text: "Contact", to: "contact" },
   ];
   return (
     <header className="sticky top-0 z-50 text-white py-4 px-9 flex items-center justify-between bg-blue-800/90 border-b border-blue-900/30">
