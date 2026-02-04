@@ -28,13 +28,9 @@ export default function ProgramDetail() {
 
       <ProgramDetailAbout selectedProgram={selectedProgram} />
 
-      {selectedProgram.learningOutcomes && (
-        <ProgramDetailLearnings selectedProgram={selectedProgram} />
-      )}
+      <ProgramDetailLearnings selectedProgram={selectedProgram} />
 
-      {selectedProgram.programStructure && (
-        <ProgramDetailCurriculum selectedProgram={selectedProgram} />
-      )}
+      <ProgramDetailCurriculum selectedProgram={selectedProgram} />
 
       <ProgramCTA />
     </main>
