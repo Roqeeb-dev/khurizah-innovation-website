@@ -19,7 +19,7 @@ export default function ProgramDetailAbout({ selectedProgram }: AboutProps) {
         </p>
       </div>
 
-      <div className="bg-gray-50 border rounded-xl p-6 space-y-6">
+      <div className="bg-blue-100 border rounded-xl p-6 space-y-6">
         {selectedProgram.targetAudience && (
           <div>
             <h4 className="font-semibold mb-3">Who This Is For</h4>

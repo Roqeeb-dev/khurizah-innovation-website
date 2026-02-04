@@ -1,0 +1,167 @@
+import type { ElementType } from "react";
+
+interface Reason {
+  icon: ElementType;
+  title: string;
+  description: string;
+  color: string;
+}
+import {
+  Clock,
+  Wrench,
+  BadgeCheck,
+  UserCheck,
+  Lightbulb,
+  Briefcase,
+  Users,
+  TrendingUp,
+} from "lucide-react";
+
+const reasons: Reason[] = [
+  {
+    icon: Clock,
+    title: "Flexible Learning Schedule",
+    description:
+      "Learn at your own pace with schedules designed to fit around your daily commitments, without compromising quality.",
+    color: "blue",
+  },
+  {
+    icon: Wrench,
+    title: "Hands-on Practical Training",
+    description:
+      "Work on real projects and tools that mirror real industry challenges, helping you build confidence and mastery.",
+    color: "emerald",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Industry-Recognized Certification",
+    description:
+      "Earn certificates that validate your skills and improve your chances with employers and clients.",
+    color: "purple",
+  },
+  {
+    icon: UserCheck,
+    title: "Personalized Mentorship",
+    description:
+      "Receive one-on-one guidance and feedback tailored to your strengths, pace, and career goals.",
+    color: "amber",
+  },
+  {
+    icon: Briefcase,
+    title: "Career-Focused Programs",
+    description:
+      "Our programs are designed with employability in mind, preparing you for real opportunities after training.",
+    color: "rose",
+  },
+  {
+    icon: Users,
+    title: "Supportive Learning Community",
+    description:
+      "Join a community of learners, mentors, and professionals who grow, collaborate, and succeed together.",
+    color: "cyan",
+  },
+  {
+    icon: TrendingUp,
+    title: "Skill Growth & Empowerment",
+    description:
+      "We empower you with practical, future-ready skills that help you grow personally and professionally.",
+    color: "indigo",
+  },
+  {
+    icon: Lightbulb,
+    title: "Innovation-Driven Learning",
+    description:
+      "We encourage creativity, critical thinking, and innovation — not just theory, but problem-solving.",
+    color: "lime",
+  },
+];
+
+const colorStyles: Record<
+  string,
+  { bg: string; text: string; iconBg: string }
+> = {
+  blue: {
+    bg: "bg-blue-50",
+    text: "text-blue-700",
+    iconBg: "bg-blue-100",
+  },
+  emerald: {
+    bg: "bg-emerald-50",
+    text: "text-emerald-700",
+    iconBg: "bg-emerald-100",
+  },
+  purple: {
+    bg: "bg-purple-50",
+    text: "text-purple-700",
+    iconBg: "bg-purple-100",
+  },
+  amber: {
+    bg: "bg-amber-50",
+    text: "text-amber-700",
+    iconBg: "bg-amber-100",
+  },
+  rose: {
+    bg: "bg-rose-50",
+    text: "text-rose-700",
+    iconBg: "bg-rose-100",
+  },
+  cyan: {
+    bg: "bg-cyan-50",
+    text: "text-cyan-700",
+    iconBg: "bg-cyan-100",
+  },
+  indigo: {
+    bg: "bg-indigo-50",
+    text: "text-indigo-700",
+    iconBg: "bg-indigo-100",
+  },
+  lime: {
+    bg: "bg-lime-50",
+    text: "text-lime-700",
+    iconBg: "bg-lime-100",
+  },
+};
+
+export default function ReasonsGrid() {
+  return (
+    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6 lg:px-16 py-10">
+      {reasons.map((reason, index) => {
+        const Icon = reason.icon;
+        const styles = colorStyles[reason.color];
+
+        return (
+          <div
+            key={index}
+            className="group relative bg-white p-6 rounded-xl border border-black/10 transition-all hover:-translate-y-1 hover:border-black/20 hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)]"
+          >
+            {/* Tech accent line */}
+            <div
+              className={`absolute left-0 top-0 h-full w-1 ${styles.iconBg}`}
+            />
+
+            {/* Header */}
+            <div className="flex items-start gap-4">
+              <div
+                className={`${styles.iconBg} ${styles.text} w-11 h-11 rounded-lg flex items-center justify-center shrink-0 ring-1 ring-black/10 transition group-hover:scale-105`}
+              >
+                <Icon className="w-5 h-5" />
+              </div>
+
+              <h3 className="text-lg font-semibold text-gray-900 leading-snug tracking-tight">
+                {reason.title}
+              </h3>
+            </div>
+
+            {/* Divider */}
+            <div className="mt-4 h-px w-full bg-gradient-to-r from-black/10 to-transparent" />
+
+            {/* Description */}
+            <p className="mt-4 text-sm leading-relaxed text-gray-600">
+              {reason.description}
+            </p>
+          </div>
+        );
+      })}
+    </section>
+  );
+}
