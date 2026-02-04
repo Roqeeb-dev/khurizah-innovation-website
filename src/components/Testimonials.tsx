@@ -1,6 +1,6 @@
 import Pill from "./Pill";
-import { Book, ChevronLeft, ChevronRight } from "lucide-react";
 import image from "../assets/fashion-designing-image.jpg";
+import { Book, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
 interface Testimonial {
@@ -74,7 +74,10 @@ export default function Testimonials() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-700">
+    <main
+      id="testimonials"
+      className="min-h-screen bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-700"
+    >
       <section className="flex flex-col text-white items-center py-7 px-6 text-center">
         {/* Pill / Badge */}
         <Pill message="Testimonials" icon={Book} />

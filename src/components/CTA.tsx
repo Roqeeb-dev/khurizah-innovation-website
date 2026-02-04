@@ -21,7 +21,7 @@ export default function CTA() {
   ];
 
   return (
-    <main className="bg-white py-20">
+    <main id="contact" className="bg-white py-20">
       <section className="max-w-6xl mx-auto bg-gradient-to-br from-blue-700 via-blue-600 to-indigo-800 rounded-3xl shadow-xl p-14 flex flex-col lg:flex-row gap-12 text-white">
         {/* left section */}
         <article className="lg:max-w-[50%] space-y-6">
