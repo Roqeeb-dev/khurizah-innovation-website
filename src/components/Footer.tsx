@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import {
   Facebook,
   Twitter,
@@ -9,6 +11,30 @@ import {
 } from "lucide-react";
 
 export default function Footer() {
+  const socialLinks = [
+    { icon: Facebook, link: "" },
+    { icon: Twitter, link: "" },
+    { icon: Instagram, link: "" },
+    { icon: Linkedin, link: "" },
+  ];
+  const quickLinks = [
+    { text: "Our Programs", link: "programs" },
+    { text: "About Us", link: "about" },
+    { text: "Testimonials", link: "testimonials" },
+    { text: "Blog", link: "" },
+    { text: "FAQs", link: "" },
+  ];
+  const programs = [
+    { title: "Web Development", link: "web-development" },
+    { title: "Catering", link: "catering" },
+    { title: "Fashion Designing", link: "fashion-design" },
+    { title: "Graphics Design", link: "graphics-design" },
+    { title: "Podcasting", link: "podcasting" },
+    { title: "Real Estate", link: "real-estate" },
+    { title: "Auto Khurizah", link: "auto-khurizah" },
+    { title: "Data Analytics", link: "data-analytics" },
+    { title: "Ghost Writing", link: "ghost-writing" },
+  ];
   return (
     <footer className="bg-gradient-to-br from-black via-slate-900 to-blue-950 text-gray-300">
       <div className="max-w-7xl mx-auto py-20">
@@ -29,14 +55,17 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center gap-3">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                <div
-                  key={i}
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600/20 hover:bg-blue-600 transition cursor-pointer"
-                >
-                  <Icon size={18} />
-                </div>
-              ))}
+              {socialLinks.map((obj, i) => {
+                const Icon = obj.icon;
+                return (
+                  <div
+                    key={i}
+                    className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600/20 hover:bg-blue-600 transition cursor-pointer"
+                  >
+                    <Icon size={18} />
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -44,18 +73,12 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3 text-sm">
-              {[
-                "Our Programs",
-                "About Us",
-                "Success Stories",
-                "Blog",
-                "FAQs",
-              ].map((link) => (
+              {quickLinks.map((obj, i) => (
                 <li
-                  key={link}
+                  key={i}
                   className="hover:text-white transition cursor-pointer"
                 >
-                  {link}
+                  <a href={`#${obj.link}`}>{obj.text}</a>
                 </li>
               ))}
             </ul>
@@ -65,18 +88,12 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Programs</h3>
             <ul className="space-y-3 text-sm">
-              {[
-                "Web Development",
-                "Catering",
-                "Forex Trading",
-                "Fashion Designing",
-                "Graphic Design",
-              ].map((program) => (
+              {programs.map((program, i) => (
                 <li
-                  key={program}
+                  key={i}
                   className="hover:text-white transition cursor-pointer"
                 >
-                  {program}
+                  <Link to={`/program/${program.link}`}>{program.title}</Link>
                 </li>
               ))}
             </ul>
