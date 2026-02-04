@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { programs } from "../ProgramData";
 import DetailHeader from "../components/DetailHeader";
 import ProgramDetailAbout from "../components/ProgramDetailAbout";
@@ -9,6 +9,7 @@ import ProgramCTA from "../components/ProgramCTA";
 export default function ProgramDetail() {
   const { id } = useParams();
   const selectedProgram = programs.find((p) => p.id === id);
+  const navigate = useNavigate();
 
   if (!selectedProgram) {
     return (
@@ -20,7 +21,11 @@ export default function ProgramDetail() {
 
   return (
     <main className="w-full">
-      <DetailHeader selectedProgram={selectedProgram} />
+      <DetailHeader
+        selectedProgram={selectedProgram}
+        onBack={() => navigate(-1)}
+      />
+
       <ProgramDetailAbout selectedProgram={selectedProgram} />
 
       {selectedProgram.learningOutcomes && (
