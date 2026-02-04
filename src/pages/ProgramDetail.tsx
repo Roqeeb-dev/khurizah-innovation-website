@@ -4,6 +4,7 @@ import { programs } from "../ProgramData";
 export default function ProgramDetail() {
   const { id } = useParams();
   const selectedProgram = programs.find((p) => p.id === id);
+
   return (
     <main>
       {/* Header section */}

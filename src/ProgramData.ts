@@ -206,63 +206,545 @@ export const programs: Program[] = [
     cover: cateringImage,
     title: "Catering",
     description:
-      "Acquire professional culinary skills and event catering expertise. From menu planning to food presentation, get hands-on experience for a successful catering career.",
+      "Acquire professional culinary skills and event catering expertise. Learn food preparation, menu planning, hygiene standards, and business management for a successful catering career.",
     icon: ChefHat,
+    duration: "8 Weeks",
+    skillLevel: "Beginner to Intermediate",
+    mode: "Physical / Hybrid",
+    targetAudience: [
+      "Aspiring caterers and food entrepreneurs",
+      "Home cooks looking to go professional",
+      "Event planners seeking catering skills",
+    ],
+    prerequisites: [
+      "Basic cooking knowledge is helpful but not required",
+      "Passion for food and hospitality",
+    ],
+    learningOutcomes: [
+      {
+        icon: ChefHat,
+        title: "Professional Cooking Skills",
+        description:
+          "Learn food preparation techniques used in commercial kitchens",
+      },
+      {
+        icon: Users,
+        title: "Event Catering",
+        description:
+          "Handle catering for weddings, parties, and corporate events",
+      },
+    ],
+    programStructure: [
+      {
+        weeks: "Week 1-3",
+        title: "Culinary Foundations",
+        topics: [
+          "Kitchen safety and hygiene",
+          "Knife skills and food preparation",
+          "Local and continental dishes",
+        ],
+      },
+      {
+        weeks: "Week 4-6",
+        title: "Event Catering",
+        topics: [
+          "Menu planning and costing",
+          "Large-scale cooking techniques",
+          "Food presentation and plating",
+        ],
+      },
+      {
+        weeks: "Week 7-8",
+        title: "Catering Business",
+        topics: [
+          "Customer service",
+          "Pricing and profit management",
+          "Marketing your catering services",
+        ],
+      },
+    ],
+    projects: [
+      {
+        title: "Event Catering Simulation",
+        skillFocus: "Menu Planning, Cooking, Presentation",
+        outcome: "Plan and execute a mock catering event",
+      },
+    ],
+    certificateDescription:
+      "Receive a Certificate of Completion recognizing your professional catering and event management skills.",
+    careerApplications: [
+      "Start a catering business",
+      "Work with event planners",
+      "Restaurant or hotel kitchen roles",
+    ],
   },
+
   {
     id: "data-analytics",
     cover: dataAnalyticsImage,
     title: "Data Analytics",
     description:
-      "Analyze and interpret data to drive informed decisions. Learn tools like Excel, SQL, and data visualization techniques for real-world business insights.",
+      "Learn how to collect, analyze, and visualize data to support decision-making using industry-standard tools.",
     icon: BarChart2,
+    duration: "10 Weeks",
+    skillLevel: "Beginner to Intermediate",
+    mode: "Online",
+    targetAudience: [
+      "Business professionals",
+      "Students and career switchers",
+      "Entrepreneurs seeking data-driven insights",
+    ],
+    prerequisites: ["Basic computer skills", "Comfort with numbers is a plus"],
+    learningOutcomes: [
+      {
+        icon: Database,
+        title: "Data Handling",
+        description: "Work with structured data using Excel and SQL",
+      },
+      {
+        icon: BarChart2,
+        title: "Data Visualization",
+        description: "Create dashboards and visual insights",
+      },
+    ],
+    programStructure: [
+      {
+        weeks: "Week 1-4",
+        title: "Foundations of Data",
+        topics: [
+          "Data types and sources",
+          "Excel fundamentals",
+          "Data cleaning techniques",
+        ],
+      },
+      {
+        weeks: "Week 5-7",
+        title: "SQL & Analysis",
+        topics: [
+          "SQL queries",
+          "Joins and aggregations",
+          "Business data analysis",
+        ],
+      },
+      {
+        weeks: "Week 8-10",
+        title: "Visualization & Reporting",
+        topics: [
+          "Charts and dashboards",
+          "Storytelling with data",
+          "Final data analysis project",
+        ],
+      },
+    ],
+    projects: [
+      {
+        title: "Business Sales Dashboard",
+        skillFocus: "Excel, SQL, Visualization",
+        outcome: "Interactive dashboard for decision-making",
+      },
+    ],
+    certificateDescription:
+      "Certificate validating your data analysis and visualization skills.",
+    careerApplications: [
+      "Junior Data Analyst",
+      "Business Intelligence Assistant",
+      "Operations and marketing analytics roles",
+    ],
   },
+
   {
     id: "fashion-design",
     cover: fashionImage,
     title: "Fashion Designing",
     description:
-      "Explore fashion design principles, from sketching to garment creation. Develop your style and learn industry techniques to create stunning apparel.",
+      "Learn fashion design from concept to creation, including sketching, fabric selection, and garment construction.",
     icon: Scissors,
+    duration: "10 Weeks",
+    skillLevel: "Beginner",
+    mode: "Physical",
+    targetAudience: ["Aspiring fashion designers", "Creative individuals"],
+    prerequisites: ["Creativity and interest in fashion"],
+    learningOutcomes: [
+      {
+        icon: Palette,
+        title: "Design & Illustration",
+        description: "Create fashion sketches and mood boards",
+      },
+      {
+        icon: Scissors,
+        title: "Garment Construction",
+        description: "Cut, sew, and finish garments professionally",
+      },
+    ],
+    programStructure: [
+      {
+        weeks: "Week 1-5",
+        title: "Design Basics",
+        topics: [
+          "Fashion illustration",
+          "Textiles and fabrics",
+          "Pattern drafting",
+        ],
+      },
+      {
+        weeks: "Week 6-10",
+        title: "Garment Creation",
+        topics: [
+          "Sewing techniques",
+          "Fittings and alterations",
+          "Final fashion piece",
+        ],
+      },
+    ],
+    projects: [
+      {
+        title: "Custom Outfit Design",
+        skillFocus: "Sketching, Sewing",
+        outcome: "Completed wearable garment",
+      },
+    ],
+    certificateDescription:
+      "Certificate recognizing foundational fashion design skills.",
+    careerApplications: [
+      "Fashion designer assistant",
+      "Tailoring business",
+      "Clothing brand startup",
+    ],
   },
+
   {
     id: "podcasting",
     cover: podcastingImage,
     title: "Podcasting",
     description:
-      "Master the art of storytelling through audio. Learn recording, editing, and publishing to build an engaging podcast audience.",
+      "Learn how to plan, record, edit, and publish professional podcasts that engage audiences.",
     icon: Mic,
+    duration: "6 Weeks",
+    skillLevel: "Beginner",
+    mode: "Online",
+    targetAudience: [
+      "Content creators",
+      "Media enthusiasts",
+      "Brand storytellers",
+    ],
+    prerequisites: ["Basic communication skills"],
+    learningOutcomes: [
+      {
+        icon: Mic,
+        title: "Audio Production",
+        description: "Record and edit high-quality audio content",
+      },
+    ],
+    programStructure: [
+      {
+        weeks: "Week 1-3",
+        title: "Podcast Foundations",
+        topics: ["Podcast formats", "Equipment setup", "Recording techniques"],
+      },
+      {
+        weeks: "Week 4-6",
+        title: "Publishing & Growth",
+        topics: [
+          "Editing and sound design",
+          "Distribution platforms",
+          "Audience growth strategies",
+        ],
+      },
+    ],
+    projects: [
+      {
+        title: "Podcast Episode",
+        skillFocus: "Recording, Editing",
+        outcome: "Published podcast episode",
+      },
+    ],
+    certificateDescription:
+      "Certificate validating your podcast production skills.",
+    careerApplications: [
+      "Podcast host",
+      "Audio content creator",
+      "Media production roles",
+    ],
   },
+
   {
     id: "ghostwriting",
     cover: ghostWritingImage,
     title: "Ghostwriting",
     description:
-      "Develop writing skills to craft compelling content for clients. From blogs to books, learn to write professionally under others’ bylines.",
+      "Learn how to write compelling content for clients while maintaining their voice and brand. This program covers blogs, articles, books, and professional client communication.",
     icon: PenTool,
+    duration: "8 Weeks",
+    skillLevel: "Beginner to Intermediate",
+    mode: "Online",
+    targetAudience: [
+      "Aspiring writers",
+      "Freelancers and content creators",
+      "Professionals looking to monetize writing skills",
+    ],
+    prerequisites: [
+      "Basic writing ability",
+      "Strong interest in storytelling and research",
+    ],
+    learningOutcomes: [
+      {
+        icon: PenTool,
+        title: "Client-Focused Writing",
+        description:
+          "Adapt writing style to match different client voices and goals",
+      },
+      {
+        icon: Users,
+        title: "Professional Collaboration",
+        description:
+          "Work with clients ethically, confidentially, and efficiently",
+      },
+    ],
+    programStructure: [
+      {
+        weeks: "Week 1-3",
+        title: "Writing Foundations",
+        topics: [
+          "Understanding ghostwriting",
+          "Voice matching techniques",
+          "Research and outlining",
+        ],
+      },
+      {
+        weeks: "Week 4-6",
+        title: "Content Types",
+        topics: [
+          "Blog and article writing",
+          "eBooks and memoirs",
+          "Editing and revision techniques",
+        ],
+      },
+      {
+        weeks: "Week 7-8",
+        title: "Freelancing & Ethics",
+        topics: [
+          "Client communication",
+          "Contracts and NDAs",
+          "Building a writing portfolio",
+        ],
+      },
+    ],
+    projects: [
+      {
+        title: "Client-Style Writing Project",
+        skillFocus: "Voice Adaptation, Research",
+        outcome: "Ghostwritten article matching a client persona",
+      },
+    ],
+    certificateDescription:
+      "Certificate recognizing professional ghostwriting and client communication skills.",
+    careerApplications: [
+      "Freelance ghostwriter",
+      "Content strategist",
+      "Editorial assistant",
+    ],
   },
+
   {
     id: "real-estate",
     cover: realEstateImage,
     title: "Real Estate",
     description:
-      "Learn the fundamentals of buying, selling, and managing property. Gain practical knowledge to thrive in the competitive real estate market.",
+      "Gain practical knowledge of property sales, leasing, valuation, and real estate investment strategies.",
     icon: Home,
+    duration: "8 Weeks",
+    skillLevel: "Beginner",
+    mode: "Physical / Hybrid",
+    targetAudience: [
+      "Aspiring real estate agents",
+      "Property investors",
+      "Entrepreneurs",
+    ],
+    prerequisites: [
+      "Basic communication skills",
+      "Interest in property and sales",
+    ],
+    learningOutcomes: [
+      {
+        icon: Home,
+        title: "Property Transactions",
+        description: "Understand buying, selling, and leasing processes",
+      },
+      {
+        icon: TrendingUp,
+        title: "Market Analysis",
+        description: "Evaluate property value and market trends",
+      },
+    ],
+    programStructure: [
+      {
+        weeks: "Week 1-4",
+        title: "Real Estate Fundamentals",
+        topics: [
+          "Types of real estate",
+          "Property laws and documentation",
+          "Land valuation basics",
+        ],
+      },
+      {
+        weeks: "Week 5-8",
+        title: "Sales & Investment",
+        topics: [
+          "Client negotiation",
+          "Marketing properties",
+          "Real estate investment strategies",
+        ],
+      },
+    ],
+    projects: [
+      {
+        title: "Property Listing Project",
+        skillFocus: "Valuation, Marketing",
+        outcome: "Create and pitch a property listing",
+      },
+    ],
+    certificateDescription:
+      "Certificate validating foundational real estate and property management skills.",
+    careerApplications: [
+      "Real estate agent",
+      "Property consultant",
+      "Real estate marketer",
+    ],
   },
+
   {
     id: "auto-khurizah",
     cover: autoKhurizahImage,
     title: "Auto-Khurizah",
     description:
-      "Hands-on training in automotive repair and maintenance. Learn diagnostics, servicing, and troubleshooting to become a skilled auto technician.",
+      "Hands-on automotive training covering vehicle diagnostics, maintenance, and repair for modern automobiles.",
     icon: Truck,
+    duration: "12 Weeks",
+    skillLevel: "Beginner to Intermediate",
+    mode: "Physical",
+    targetAudience: [
+      "Aspiring auto technicians",
+      "Workshop assistants",
+      "Automobile enthusiasts",
+    ],
+    prerequisites: [
+      "Basic mechanical interest",
+      "Willingness to learn hands-on",
+    ],
+    learningOutcomes: [
+      {
+        icon: Truck,
+        title: "Vehicle Maintenance",
+        description: "Perform routine servicing and preventive maintenance",
+      },
+      {
+        icon: Database,
+        title: "Diagnostics",
+        description: "Identify and fix common mechanical and electrical faults",
+      },
+    ],
+    programStructure: [
+      {
+        weeks: "Week 1-6",
+        title: "Automotive Basics",
+        topics: [
+          "Engine fundamentals",
+          "Brake and suspension systems",
+          "Safety practices",
+        ],
+      },
+      {
+        weeks: "Week 7-12",
+        title: "Advanced Diagnostics",
+        topics: [
+          "Electrical systems",
+          "Fault detection tools",
+          "Workshop management basics",
+        ],
+      },
+    ],
+    projects: [
+      {
+        title: "Vehicle Diagnostic Project",
+        skillFocus: "Troubleshooting, Repair",
+        outcome: "Diagnose and repair a vehicle fault",
+      },
+    ],
+    certificateDescription:
+      "Certificate recognizing practical automotive repair and maintenance skills.",
+    careerApplications: [
+      "Automobile technician",
+      "Workshop assistant",
+      "Vehicle maintenance entrepreneur",
+    ],
   },
+
   {
     id: "graphic-design",
     cover: graphicImage,
     title: "Graphics Design",
     description:
-      "Learn to create stunning visuals for digital and print media. Master tools like Photoshop, Illustrator, and Figma to bring your creative ideas to life.",
+      "Learn to create visually compelling designs for branding, marketing, and digital products using industry-standard tools.",
     icon: Palette,
+    duration: "10 Weeks",
+    skillLevel: "Beginner to Intermediate",
+    mode: "Online / Hybrid",
+    targetAudience: [
+      "Aspiring designers",
+      "Content creators",
+      "Marketing professionals",
+    ],
+    prerequisites: ["Basic computer skills", "Creative interest"],
+    learningOutcomes: [
+      {
+        icon: Palette,
+        title: "Visual Design",
+        description: "Apply design principles to create appealing visuals",
+      },
+      {
+        icon: Smartphone,
+        title: "Digital Tools",
+        description: "Use Photoshop, Illustrator, and Figma effectively",
+      },
+    ],
+    programStructure: [
+      {
+        weeks: "Week 1-4",
+        title: "Design Foundations",
+        topics: ["Color theory", "Typography", "Layout and composition"],
+      },
+      {
+        weeks: "Week 5-7",
+        title: "Design Tools",
+        topics: [
+          "Photoshop essentials",
+          "Illustrator vector graphics",
+          "Figma for UI design",
+        ],
+      },
+      {
+        weeks: "Week 8-10",
+        title: "Branding & Portfolio",
+        topics: [
+          "Logo and brand identity",
+          "Marketing creatives",
+          "Portfolio development",
+        ],
+      },
+    ],
+    projects: [
+      {
+        title: "Brand Identity Project",
+        skillFocus: "Branding, Visual Design",
+        outcome: "Complete brand kit and design portfolio",
+      },
+    ],
+    certificateDescription:
+      "Certificate validating professional graphic design skills.",
+    careerApplications: [
+      "Graphic designer",
+      "UI/UX designer",
+      "Brand and marketing designer",
+    ],
   },
 ];
