@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   Facebook,
   Twitter,
@@ -9,14 +10,41 @@ import {
 } from "lucide-react";
 
 export default function Footer() {
+  const socialLinks = [
+    { icon: Facebook, link: "" },
+    { icon: Twitter, link: "" },
+    { icon: Instagram, link: "" },
+    { icon: Linkedin, link: "" },
+  ];
+
+  const quickLinks = [
+    { text: "Our Programs", link: "programs" },
+    { text: "About Us", link: "about" },
+    { text: "Testimonials", link: "testimonials" },
+    { text: "Blog", link: "" },
+    { text: "FAQs", link: "" },
+  ];
+
+  const programs = [
+    { title: "Web Development", link: "web-development" },
+    { title: "Catering", link: "catering" },
+    { title: "Fashion Designing", link: "fashion-design" },
+    { title: "Graphics Design", link: "graphics-design" },
+    { title: "Podcasting", link: "podcasting" },
+    { title: "Real Estate", link: "real-estate" },
+    { title: "Auto Khurizah", link: "auto-khurizah" },
+    { title: "Data Analytics", link: "data-analytics" },
+    { title: "Ghost Writing", link: "ghost-writing" },
+  ];
+
   return (
     <footer className="bg-gradient-to-br from-black via-slate-900 to-blue-950 text-gray-300">
-      <div className="max-w-7xl mx-auto py-20">
-        {/* Top section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto py-16 px-5 sm:px-8">
+        {/* Top */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
+          <div className="text-center sm:text-left">
+            <div className="flex items-center justify-center sm:justify-start gap-2 mb-4">
               <span className="text-blue-500 text-2xl">✦</span>
               <h2 className="text-white text-xl font-semibold">
                 Khurizah Innovation
@@ -28,73 +56,64 @@ export default function Footer() {
               future with our world-class training programs.
             </p>
 
-            <div className="flex items-center gap-3">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                <div
-                  key={i}
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600/20 hover:bg-blue-600 transition cursor-pointer"
-                >
-                  <Icon size={18} />
-                </div>
-              ))}
+            <div className="flex items-center justify-center sm:justify-start gap-3">
+              {socialLinks.map((obj, i) => {
+                const Icon = obj.icon;
+                return (
+                  <div
+                    key={i}
+                    className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600/20 hover:bg-blue-600 transition cursor-pointer"
+                  >
+                    <Icon size={18} />
+                  </div>
+                );
+              })}
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center sm:text-left">
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3 text-sm">
-              {[
-                "Our Programs",
-                "About Us",
-                "Success Stories",
-                "Blog",
-                "FAQs",
-              ].map((link) => (
+              {quickLinks.map((obj, i) => (
                 <li
-                  key={link}
+                  key={i}
                   className="hover:text-white transition cursor-pointer"
                 >
-                  {link}
+                  <a href={`#${obj.link}`}>{obj.text}</a>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Programs */}
-          <div>
+          <div className="text-center sm:text-left">
             <h3 className="text-white font-semibold mb-4">Programs</h3>
             <ul className="space-y-3 text-sm">
-              {[
-                "Web Development",
-                "Catering",
-                "Forex Trading",
-                "Fashion Designing",
-                "Graphic Design",
-              ].map((program) => (
+              {programs.map((program, i) => (
                 <li
-                  key={program}
+                  key={i}
                   className="hover:text-white transition cursor-pointer"
                 >
-                  {program}
+                  <Link to={`/program/${program.link}`}>{program.title}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="text-center sm:text-left">
             <h3 className="text-white font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-4 text-sm">
-              <li className="flex items-start gap-3">
+              <li className="flex items-start justify-center sm:justify-start gap-3">
                 <MapPin size={18} className="text-blue-500 mt-1" />
                 <span>123 Innovation Street, Lagos, Nigeria</span>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center justify-center sm:justify-start gap-3">
                 <Phone size={18} className="text-blue-500" />
                 <span>+234 (0) 123 456 7890</span>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center justify-center sm:justify-start gap-3">
                 <Mail size={18} className="text-blue-500" />
                 <span>info@khurizahinnovation.com</span>
               </li>
@@ -103,11 +122,11 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <hr className="border-white/10 my-16" />
+        <hr className="border-white/10 my-14" />
 
         {/* Newsletter */}
         <div className="text-center max-w-2xl mx-auto">
-          <h3 className="text-white text-2xl font-semibold mb-2">
+          <h3 className="text-white text-xl sm:text-2xl font-semibold mb-2">
             Stay Updated
           </h3>
           <p className="text-sm mb-6">
@@ -121,17 +140,19 @@ export default function Footer() {
               placeholder="Enter your email"
               className="w-full px-5 py-3 rounded-full bg-white/10 border border-white/10 outline-none focus:ring-2 focus:ring-blue-600"
             />
-            <button className="px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition">
+            <button className="w-full sm:w-auto px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition">
               Subscribe
             </button>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-16 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400 gap-4">
-          <p>© 2026 Khurizah Innovation. All rights reserved.</p>
+        {/* Bottom */}
+        <div className="mt-14 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400 gap-4">
+          <p className="text-center md:text-left">
+            © 2026 Khurizah Innovation. All rights reserved.
+          </p>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 sm:gap-6">
             <span className="hover:text-white cursor-pointer">
               Privacy Policy
             </span>

@@ -13,6 +13,7 @@ interface Testimonial {
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
+
   const testimonials: Testimonial[] = [
     {
       cover: image,
@@ -21,7 +22,6 @@ export default function Testimonials() {
       jobTitle: "Frontend Engineer",
       program: "Web Development",
     },
-
     {
       cover: image,
       text: "What I appreciated most was the emphasis on real-world practices. I learned how to structure projects, write reusable components, and debug efficiently. The program gave me the confidence to apply for junior developer roles.",
@@ -62,68 +62,64 @@ export default function Testimonials() {
   const displayedTestimonial = testimonials[currentIndex];
 
   function incrementIndex() {
-    currentIndex >= testimonials.length - 1
-      ? setCurrentIndex(0)
-      : setCurrentIndex(currentIndex + 1);
+    setCurrentIndex((prev) => (prev >= testimonials.length - 1 ? 0 : prev + 1));
   }
 
   function decrementIndex() {
-    currentIndex === 0
-      ? setCurrentIndex(testimonials.length - 1)
-      : setCurrentIndex(currentIndex - 1);
+    setCurrentIndex((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1,
+    );
   }
 
   return (
     <main
       id="testimonials"
-      className="min-h-screen bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-700"
+      className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-700 py-16"
     >
-      <section className="flex flex-col text-white items-center py-7 px-6 text-center">
-        {/* Pill / Badge */}
+      <section className="flex flex-col text-white items-center px-5 sm:px-8 text-center">
         <Pill message="Testimonials" icon={Book} />
 
-        <h1 className="mt-6 text-5xl font-semibold tracking-tight">
+        <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
           Success Stories
         </h1>
 
-        <p className="text-lg sm:text-xl mt-4 max-w-3xl leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl mt-4 max-w-3xl leading-relaxed">
           Hear from our successful graduates who have transformed their careers
         </p>
       </section>
 
-      {/* testimonials */}
-      <section className="max-w-6xl mx-auto my-10 bg-white/90 backdrop-blur-md p-8 rounded-[48px] shadow-lg border border-gray-100">
-        <article className="flex flex-col md:flex-row items-center gap-10">
-          {/* left image */}
-          <div className="w-full md:max-w-sm overflow-hidden rounded-3xl shadow-md">
+      {/* Testimonials Card */}
+      <section className="max-w-6xl mx-auto mt-12 bg-white/90 backdrop-blur-md p-6 sm:p-8 rounded-3xl sm:rounded-[48px] shadow-lg border border-gray-100">
+        <article className="flex flex-col md:flex-row items-center gap-8 md:gap-10">
+          {/* Image */}
+          <div className="w-full sm:max-w-xs md:max-w-sm overflow-hidden rounded-2xl sm:rounded-3xl shadow-md">
             <img
               src={displayedTestimonial.cover}
               alt={`${displayedTestimonial.name} testimonial cover image`}
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              className="w-full h-[260px] sm:h-full object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
 
-          {/* right text group */}
-          <div className="flex-1">
-            <p className="text-lg md:text-xl leading-relaxed text-gray-700 italic">
+          {/* Text */}
+          <div className="flex-1 text-center md:text-left">
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-700 italic">
               “{displayedTestimonial.text}”
             </p>
 
-            {/* name + title */}
             <div className="mt-6">
-              <p className="text-xl font-semibold text-gray-900">
+              <p className="text-lg sm:text-xl font-semibold text-gray-900">
                 {displayedTestimonial.name}
               </p>
-              <p className="text-gray-500">
+              <p className="text-sm sm:text-base text-gray-500">
                 {displayedTestimonial.jobTitle} · {displayedTestimonial.program}
               </p>
             </div>
 
-            {/* control buttons */}
-            <div className="mt-8 flex items-center gap-6">
+            {/* Controls */}
+            <div className="mt-8 flex items-center justify-center md:justify-start gap-6">
               <ChevronLeft
                 onClick={decrementIndex}
-                className="w-11 h-11 p-2 rounded-full bg-gray-100 hover:bg-blue-600 hover:text-white transition cursor-pointer shadow-sm"
+                className="w-10 h-10 sm:w-11 sm:h-11 p-2 rounded-full bg-gray-100 hover:bg-blue-600 hover:text-white transition cursor-pointer shadow-sm"
               />
 
               <div className="flex items-center gap-2">
@@ -141,7 +137,7 @@ export default function Testimonials() {
 
               <ChevronRight
                 onClick={incrementIndex}
-                className="w-11 h-11 p-2 rounded-full bg-gray-100 hover:bg-blue-600 hover:text-white transition cursor-pointer shadow-sm"
+                className="w-10 h-10 sm:w-11 sm:h-11 p-2 rounded-full bg-gray-100 hover:bg-blue-600 hover:text-white transition cursor-pointer shadow-sm"
               />
             </div>
           </div>

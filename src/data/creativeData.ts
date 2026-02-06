@@ -130,7 +130,7 @@ export const creativeData: Program[] = [
   },
 
   {
-    id: "ghostwriting",
+    id: "ghost-writing",
     cover: ghostWritingImage,
     title: "Ghostwriting",
     description:

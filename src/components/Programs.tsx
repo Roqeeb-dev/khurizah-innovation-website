@@ -5,16 +5,16 @@ import { programs } from "../ProgramData";
 
 export default function Programs() {
   return (
-    <main id="programs" className="bg-white min-h-[50vh] py-10">
-      <section className="flex flex-col items-center py-12 px-6 text-center">
-        {/* Pill / Badge */}
+    <main id="programs" className="bg-white py-16">
+      {/* Header */}
+      <section className="flex flex-col items-center py-12 px-5 sm:px-8 text-center">
         <Pill message="Our Programs" icon={NotebookTabs} />
 
-        <h1 className="mt-6 text-5xl font-semibold tracking-tight text-gray-900">
+        <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-gray-900">
           What We Offer
         </h1>
 
-        <p className="text-gray-600 text-lg sm:text-xl mt-4 max-w-3xl leading-relaxed">
+        <p className="text-gray-600 text-base sm:text-lg md:text-xl mt-4 max-w-3xl leading-relaxed">
           Choose from our diverse range of skills training programs, carefully
           designed to meet industry demands and empower you for real-world
           success.
@@ -22,11 +22,15 @@ export default function Programs() {
       </section>
 
       {/* Programs grid */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-20">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-5 sm:px-8 lg:px-20">
         {programs.map((obj) => {
           const Icon = obj.icon;
+
           return (
-            <article className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transition-transform duration-300 hover:scale-[1.02]">
+            <article
+              key={obj.id}
+              className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transition-transform duration-300 hover:scale-[1.02]"
+            >
               {/* Image */}
               <div className="overflow-hidden">
                 <img
@@ -49,7 +53,7 @@ export default function Programs() {
                 {obj.description}
               </p>
 
-              {/* Learn More Link */}
+              {/* Learn More */}
               <div className="px-4 pb-4 mt-4">
                 <Link
                   to={`/program/${obj.id}`}
