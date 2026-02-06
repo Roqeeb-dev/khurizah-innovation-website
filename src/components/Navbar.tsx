@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Lightbulb } from "lucide-react";
+import { Lightbulb, Menu } from "lucide-react";
 
 interface Link {
   text: string;
@@ -14,14 +14,15 @@ export default function Navbar() {
     { text: "Contact", to: "contact" },
   ];
   return (
-    <header className="sticky top-0 z-50 text-white py-4 px-9 flex items-center justify-between bg-blue-800/90 border-b border-blue-900/30">
+    <header className="sticky top-0 z-50 text-white py-4 px-3 lg:px-9 flex items-center justify-between bg-blue-800/90 border-b border-blue-900/30">
       <div className="flex items-center gap-2 group">
         <Lightbulb className="w-6 h-6 text-blue-300 group-hover:text-blue-200 transition-colors" />
         <span className="text-2xl font-semibold tracking-tight">
           Khurizah Innovation
         </span>
       </div>
-      <ul className="flex gap-8">
+
+      <ul className="hidden lg:flex gap-8">
         {links.map((link) => (
           <NavLink
             key={link.to}
@@ -37,7 +38,11 @@ export default function Navbar() {
           </NavLink>
         ))}
       </ul>
-      <button className="bg-white text-blue-900 rounded-2xl px-6 py-2.5 font-medium shadow-md hover:shadow-lg hover:bg-blue-50 transition-all duration-300">
+
+      {/* Mobile menu button */}
+      <Menu className="flex lg:hidden" />
+
+      <button className="hidden lg:flex bg-white text-blue-900 rounded-2xl px-6 py-2.5 font-medium shadow-md hover:shadow-lg hover:bg-blue-50 transition-all duration-300">
         Sign Up
       </button>
     </header>
