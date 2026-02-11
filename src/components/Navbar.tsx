@@ -1,5 +1,6 @@
 import { Lightbulb, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import MobileDropdown from "./MobileDropdown";
 
 interface Link {
@@ -9,6 +10,7 @@ interface Link {
 
 export default function Navbar() {
   const [isDropdownShown, setIsDropdownShown] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   function toggleDropdown() {
     setIsDropdownShown(!isDropdownShown);
@@ -48,7 +50,10 @@ export default function Navbar() {
         <Menu onClick={toggleDropdown} className="flex lg:hidden" />
       )}
 
-      <button className="hidden lg:flex bg-white text-blue-900 rounded-2xl px-6 py-2.5 font-medium shadow-md hover:shadow-lg hover:bg-blue-50 transition-all duration-300">
+      <button
+        onClick={() => navigate("/get-started")}
+        className="hidden lg:flex bg-white text-blue-900 rounded-2xl px-6 py-2.5 font-medium shadow-md hover:shadow-lg hover:bg-blue-50 transition-all duration-300"
+      >
         Get Started
       </button>
 

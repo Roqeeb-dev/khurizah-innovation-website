@@ -1,7 +1,9 @@
 import { Plane, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import image from "../assets/hero-image.jpg";
 
 export default function Hero() {
+  const navigate = useNavigate();
   return (
     <main className="max-w-[1400px] mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12 min-h-screen p-5 md:px-8">
       {/* Left */}
@@ -31,7 +33,10 @@ export default function Hero() {
             <span>View Programs</span>
             <ArrowRight className="w-5 h-5" />
           </a>
-          <button className="bg-blue-600 text-white rounded-2xl px-6 py-3 font-medium shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 w-full sm:w-auto">
+          <button
+            onClick={() => navigate("/get-started")}
+            className="bg-blue-600 text-white rounded-2xl px-6 py-3 font-medium shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 w-full sm:w-auto"
+          >
             Get Started
           </button>
         </div>
