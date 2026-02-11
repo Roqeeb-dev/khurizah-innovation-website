@@ -89,59 +89,62 @@ export default function Testimonials() {
       </section>
 
       {/* Testimonials Card */}
-      <section className="max-w-6xl mx-auto mt-12 bg-white/90 backdrop-blur-md p-6 sm:p-8 rounded-3xl sm:rounded-[48px] shadow-lg border border-gray-100">
-        <article className="flex flex-col md:flex-row items-center gap-8 md:gap-10">
-          {/* Image */}
-          <div className="w-full sm:max-w-xs md:max-w-sm overflow-hidden rounded-2xl sm:rounded-3xl shadow-md">
-            <img
-              src={displayedTestimonial.cover}
-              alt={`${displayedTestimonial.name} testimonial cover image`}
-              className="w-full h-[260px] sm:h-full object-cover hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-
-          {/* Text */}
-          <div className="flex-1 text-center md:text-left">
-            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-700 italic">
-              “{displayedTestimonial.text}”
-            </p>
-
-            <div className="mt-6">
-              <p className="text-lg sm:text-xl font-semibold text-gray-900">
-                {displayedTestimonial.name}
-              </p>
-              <p className="text-sm sm:text-base text-gray-500">
-                {displayedTestimonial.jobTitle} · {displayedTestimonial.program}
-              </p>
+      <section className="px-4 sm:px-6 lg:px-0">
+        <div className="max-w-6xl mx-auto mt-12 bg-white/90 backdrop-blur-md p-5 sm:p-8 rounded-3xl sm:rounded-[48px] shadow-xl border border-gray-100">
+          <article className="flex flex-col md:flex-row items-center gap-6 sm:gap-8 md:gap-10">
+            {/* Image */}
+            <div className="w-full sm:max-w-xs md:max-w-sm overflow-hidden rounded-2xl sm:rounded-3xl shadow-md">
+              <img
+                src={displayedTestimonial.cover}
+                alt={`${displayedTestimonial.name} testimonial cover image`}
+                className="w-full h-[220px] sm:h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
             </div>
 
-            {/* Controls */}
-            <div className="mt-8 flex items-center justify-center md:justify-start gap-6">
-              <ChevronLeft
-                onClick={decrementIndex}
-                className="w-10 h-10 sm:w-11 sm:h-11 p-2 rounded-full bg-gray-100 hover:bg-blue-600 hover:text-white transition cursor-pointer shadow-sm"
-              />
+            {/* Text */}
+            <div className="flex-1 text-center md:text-left">
+              <p className="text-sm sm:text-lg md:text-xl leading-relaxed text-gray-700 italic">
+                “{displayedTestimonial.text}”
+              </p>
 
-              <div className="flex items-center gap-2">
-                {testimonials.map((t, index) => (
-                  <span
-                    key={t.name}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      index === currentIndex
-                        ? "bg-blue-600 w-6"
-                        : "bg-gray-400 w-2"
-                    }`}
-                  />
-                ))}
+              <div className="mt-5 sm:mt-6">
+                <p className="text-base sm:text-xl font-semibold text-gray-900">
+                  {displayedTestimonial.name}
+                </p>
+                <p className="text-xs sm:text-base text-gray-500">
+                  {displayedTestimonial.jobTitle} ·{" "}
+                  {displayedTestimonial.program}
+                </p>
               </div>
 
-              <ChevronRight
-                onClick={incrementIndex}
-                className="w-10 h-10 sm:w-11 sm:h-11 p-2 rounded-full bg-gray-100 hover:bg-blue-600 hover:text-white transition cursor-pointer shadow-sm"
-              />
+              {/* Controls */}
+              <div className="mt-6 sm:mt-8 flex items-center justify-center md:justify-start gap-4 sm:gap-6">
+                <ChevronLeft
+                  onClick={decrementIndex}
+                  className="w-9 h-9 sm:w-11 sm:h-11 p-2 rounded-full bg-gray-100 hover:bg-blue-600 hover:text-white transition cursor-pointer shadow-sm"
+                />
+
+                <div className="flex items-center gap-2">
+                  {testimonials.map((t, index) => (
+                    <span
+                      key={t.name}
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        index === currentIndex
+                          ? "bg-blue-600 w-6"
+                          : "bg-gray-400 w-2"
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                <ChevronRight
+                  onClick={incrementIndex}
+                  className="w-9 h-9 sm:w-11 sm:h-11 p-2 rounded-full bg-gray-100 hover:bg-blue-600 hover:text-white transition cursor-pointer shadow-sm"
+                />
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </section>
     </main>
   );
