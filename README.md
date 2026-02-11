@@ -1,73 +1,119 @@
-# React + TypeScript + Vite
+# Khurizah Innovation – Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and conversion-focused landing page built for **Khurizah Innovation**, designed to showcase services, highlight value propositions, and drive user engagement.
 
-Currently, two official plugins are available:
+This project emphasizes clean UI/UX, performance, accessibility, and mobile-first design — delivering a professional web presence suitable for a tech-driven brand.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Preview
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+> _https://khurizah-innovation.vercel.app_
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📌 Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- ⚡ Fast & fully responsive design
+- 🎯 Conversion-focused layout (Hero, CTA, Testimonials, etc.)
+- 🧩 Modular and reusable components
+- 🌙 Modern UI with clean typography and balanced color scheme
+- 📱 Mobile-first and cross-browser compatible
+- ♿ Accessibility-friendly structure
+- 🧠 SEO-optimized layout
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Frontend:** React + TypeScript
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Routing:** React Router DOM
+- **Build Tool:** Vite
+- **Deployment:** Vercel
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📂 Project Structure
+
+src/
+├── components/ # Reusable UI components
+├── pages/ # Page sections (Hero, Features, CTA, etc.)
+├── assets/ # Images, icons, fonts
+├── routes/ # App routing
+└── App.tsx # App entry point
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Roqeeb-dev/khurizah-innovation-website.git
+Navigate into the project:
+
+cd khurizah-innovation-website
+Install dependencies:
+
+npm install
+Start development server:
+
+npm run dev
+Build for production:
+
+npm run build
+Preview production build:
+
+npm run preview
+
+🧠 Design Philosophy
+Minimal & clean interface
+
+Clear visual hierarchy
+
+Strong CTA placement
+
+Modern spacing system
+
+Comfortable font scaling
+
+Balanced color contrast
+
+📈 Performance & Optimization
+Optimized images and assets
+
+Component-level rendering optimization
+
+Lazy loading where applicable
+
+SEO-friendly structure
+
+🔐 Environment Variables
+No environment variables are required for this project.
+
+🤝 Contributing
+Contributions, issues, and feature requests are welcome.
+
+Fork the repo
+
+Create a feature branch
+
+Commit changes
+
+Push to branch
+
+Open a Pull Request
+
+
+🧑‍💻 Author
+Roqeeb
+Frontend Engineer
+
+GitHub: https://github.com/Roqeeb-dev
+
+📄 License
+This project is licensed under the MIT License.
+
 ```
