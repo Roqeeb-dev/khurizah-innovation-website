@@ -1,6 +1,6 @@
 import { Plane, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import image from "../assets/hero-image.jpg";
+import image2 from "../assets/Innovation-rafiki.png";
 
 export default function Hero() {
   const navigate = useNavigate();
@@ -45,11 +45,11 @@ export default function Hero() {
       {/* Right image */}
       <div className="w-full lg:w-1/2 relative">
         <img
-          src={image}
+          src={image2}
           alt="Laptop on a desk"
-          className="w-full h-[280px] sm:h-[380px] lg:h-full object-cover rounded-3xl shadow-2xl"
+          className="w-full h-[280px] sm:h-[380px] lg:h-full object-cover"
         />
-        <div className="absolute inset-0 rounded-3xl ring-1 ring-white/10" />
+        <div className="absolute inset-0" />
       </div>
     </main>
   );
