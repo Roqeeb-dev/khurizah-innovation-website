@@ -1,5 +1,6 @@
 import Pill from "./Pill";
 import image from "../assets/fashion-designing-image.jpg";
+import logo from "../assets/logo.jpeg";
 import { Book, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
@@ -95,9 +96,9 @@ export default function Testimonials() {
             {/* Image */}
             <div className="w-full sm:max-w-xs md:max-w-sm overflow-hidden rounded-2xl sm:rounded-3xl shadow-md">
               <img
-                src={displayedTestimonial.cover}
+                src={logo}
                 alt={`${displayedTestimonial.name} testimonial cover image`}
-                className="w-full h-[220px] sm:h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-[300px] object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
 
