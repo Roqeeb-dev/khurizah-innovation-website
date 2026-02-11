@@ -21,7 +21,6 @@ export default function MobileDropdown({
 
   return (
     <>
-      {/* Backdrop */}
       <div
         onClick={onClose}
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
@@ -40,7 +39,7 @@ export default function MobileDropdown({
               key={link.to}
               href={`#${link.to}`}
               onClick={onClose}
-              className="text-lg font-medium text-white/90 hover:text-white transition"
+              className="text-lg font-medium text-white/80 hover:text-white transition"
             >
               {link.text}
             </a>

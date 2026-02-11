@@ -24,10 +24,13 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-          <button className="bg-white text-blue-900 rounded-2xl flex items-center justify-center gap-2 px-6 py-3 font-medium shadow-md hover:shadow-lg hover:bg-blue-50 transition-all duration-300 w-full sm:w-auto">
+          <a
+            href="#programs"
+            className="bg-white text-blue-900 rounded-2xl flex items-center justify-center gap-2 px-6 py-3 font-medium shadow-md hover:shadow-lg hover:bg-blue-50 transition-all duration-300 w-full sm:w-auto"
+          >
             <span>View Programs</span>
             <ArrowRight className="w-5 h-5" />
-          </button>
+          </a>
           <button className="bg-blue-600 text-white rounded-2xl px-6 py-3 font-medium shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 w-full sm:w-auto">
             Get Started
           </button>
