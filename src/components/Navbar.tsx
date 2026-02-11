@@ -1,5 +1,6 @@
-import { NavLink } from "react-router-dom";
-import { Lightbulb, Menu } from "lucide-react";
+import { Lightbulb, Menu, X } from "lucide-react";
+import { useState } from "react";
+import MobileDropdown from "./MobileDropdown";
 
 interface Link {
   text: string;
@@ -7,6 +8,12 @@ interface Link {
 }
 
 export default function Navbar() {
+  const [isDropdownShown, setIsDropdownShown] = useState<boolean>(false);
+
+  function toggleDropdown() {
+    setIsDropdownShown(!isDropdownShown);
+  }
+
   const links: Link[] = [
     { text: "Programs", to: "programs" },
     { text: "About", to: "about" },
@@ -24,27 +31,32 @@ export default function Navbar() {
 
       <ul className="hidden lg:flex gap-8">
         {links.map((link) => (
-          <NavLink
+          <a
             key={link.to}
-            to={link.to}
-            className={({ isActive }) =>
-              `
-          text-lg font-medium transition-colors duration-300
-          ${isActive ? "text-blue-200" : "text-white/80 hover:text-white"}
-          `
-            }
+            href={`#${link.to}`}
+            className="text-lg font-medium transition-colors duration-300 text-white/80 hover:text-white active:text-white"
           >
             {link.text}
-          </NavLink>
+          </a>
         ))}
       </ul>
 
       {/* Mobile menu button */}
-      <Menu className="flex lg:hidden" />
+      {isDropdownShown ? (
+        <X onClick={toggleDropdown} className="flex lg:hidden" />
+      ) : (
+        <Menu onClick={toggleDropdown} className="flex lg:hidden" />
+      )}
 
       <button className="hidden lg:flex bg-white text-blue-900 rounded-2xl px-6 py-2.5 font-medium shadow-md hover:shadow-lg hover:bg-blue-50 transition-all duration-300">
         Sign Up
       </button>
+
+      <MobileDropdown
+        isOpen={isDropdownShown}
+        onClose={() => setIsDropdownShown(false)}
+        links={links}
+      />
     </header>
   );
 }
