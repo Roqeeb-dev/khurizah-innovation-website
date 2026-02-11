@@ -49,7 +49,7 @@ export default function Navbar() {
       )}
 
       <button className="hidden lg:flex bg-white text-blue-900 rounded-2xl px-6 py-2.5 font-medium shadow-md hover:shadow-lg hover:bg-blue-50 transition-all duration-300">
-        Sign Up
+        Get Started
       </button>
 
       <MobileDropdown

@@ -21,8 +21,6 @@ export default function Footer() {
     { text: "Our Programs", link: "programs" },
     { text: "About Us", link: "about" },
     { text: "Testimonials", link: "testimonials" },
-    { text: "Blog", link: "" },
-    { text: "FAQs", link: "" },
   ];
 
   const programs = [
@@ -107,11 +105,13 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start justify-center sm:justify-start gap-3">
                 <MapPin size={18} className="text-blue-500 mt-1" />
-                <span>123 Innovation Street, Lagos, Nigeria</span>
+                <span>
+                  Plot 101B, Post Service Housing Estate, Ojo, Lagos, Nigeria
+                </span>
               </li>
               <li className="flex items-center justify-center sm:justify-start gap-3">
                 <Phone size={18} className="text-blue-500" />
-                <span>+234 (0) 123 456 7890</span>
+                <span>+234 8150458351</span>
               </li>
               <li className="flex items-center justify-center sm:justify-start gap-3">
                 <Mail size={18} className="text-blue-500" />

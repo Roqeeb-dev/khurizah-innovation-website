@@ -52,7 +52,7 @@ export default function CTA() {
           <div className="space-y-4 text-blue-100 text-sm sm:text-base">
             <div className="flex items-center justify-center lg:justify-start gap-3">
               <Phone size={18} />
-              <span>0801 234 5678</span>
+              <span>0815 0445 8351</span>
             </div>
             <div className="flex items-center justify-center lg:justify-start gap-3">
               <Mail size={18} />
