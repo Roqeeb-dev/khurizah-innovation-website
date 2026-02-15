@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { X } from "lucide-react";
 
 interface NavLink {
@@ -18,6 +18,7 @@ export default function MobileDropdown({
   links,
 }: DropdownProps) {
   if (!isOpen) return null;
+  const navigate = useNavigate();
 
   return (
     <>
@@ -45,13 +46,12 @@ export default function MobileDropdown({
             </a>
           ))}
 
-          <Link
-            to="/signup"
-            onClick={onClose}
-            className="mt-6 bg-white text-blue-900 text-center py-3 rounded-xl font-semibold hover:bg-blue-100 transition"
+          <button
+            onClick={() => navigate("/get-started")}
+            className="bg-white text-blue-900 rounded-2xl px-6 py-2.5 font-medium shadow-md hover:shadow-lg hover:bg-blue-50 transition-all duration-300"
           >
-            Sign Up
-          </Link>
+            Get Started
+          </button>
         </nav>
       </aside>
     </>
