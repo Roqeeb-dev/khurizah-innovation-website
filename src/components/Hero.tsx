@@ -4,10 +4,11 @@ import image2 from "../assets/Innovation-rafiki.png";
 
 export default function Hero() {
   const navigate = useNavigate();
+
   return (
-    <main className="max-w-[1400px] mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12 min-h-screen p-5 md:px-8">
+    <main className="max-w-[1400px] mx-auto flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between gap-10 min-h-[90vh] sm:min-h-screen px-5 py-10 md:px-8">
       {/* Left */}
-      <section className="text-white w-full lg:max-w-[50%] text-center lg:text-left">
+      <section className="text-white w-full lg:max-w-[50%] text-center lg:text-left flex flex-col items-center lg:items-start">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-blue-400/40 bg-white/90 backdrop-blur text-blue-900 font-medium text-sm rounded-full shadow-sm">
           <Plane className="w-4 h-4" />
           <span>Transform your future today</span>
@@ -25,7 +26,7 @@ export default function Hero() {
           industry-ready learning experiences.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full sm:w-auto">
           <a
             href="#programs"
             className="bg-white text-blue-900 rounded-2xl flex items-center justify-center gap-2 px-6 py-3 font-medium shadow-md hover:shadow-lg hover:bg-blue-50 transition-all duration-300 w-full sm:w-auto"
@@ -33,6 +34,7 @@ export default function Hero() {
             <span>View Programs</span>
             <ArrowRight className="w-5 h-5" />
           </a>
+
           <button
             onClick={() => navigate("/get-started")}
             className="bg-blue-600 text-white rounded-2xl px-6 py-3 font-medium shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 w-full sm:w-auto"
@@ -43,13 +45,12 @@ export default function Hero() {
       </section>
 
       {/* Right image */}
-      <div className="w-full lg:w-1/2 relative">
+      <div className="w-full lg:w-1/2 flex justify-center">
         <img
           src={image2}
           alt="Laptop on a desk"
-          className="w-full h-[280px] sm:h-[380px] lg:h-full object-cover"
+          className="w-full max-w-sm sm:max-w-md lg:max-w-full h-[260px] sm:h-[340px] lg:h-full object-contain"
         />
-        <div className="absolute inset-0" />
       </div>
     </main>
   );

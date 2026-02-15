@@ -39,22 +39,22 @@ export default function Footer() {
     <footer className="bg-gradient-to-br from-black via-slate-900 to-blue-950 text-gray-300">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-8">
         {/* Top */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
-          <div className="text-center sm:text-left px-2 sm:px-0">
-            <div className="flex items-center justify-center sm:justify-start gap-2 mb-4">
+          <div className="text-left">
+            <div className="flex items-center gap-2 mb-4">
               <span className="text-blue-500 text-2xl">✦</span>
               <h2 className="text-white text-xl font-semibold">
                 Khurizah Innovation
               </h2>
             </div>
 
-            <p className="text-sm leading-relaxed mb-6">
+            <p className="text-sm leading-relaxed mb-6 max-w-sm">
               Empowering you through skills and innovation. Transform your
               future with our world-class training programs.
             </p>
 
-            <div className="flex items-center justify-center sm:justify-start gap-3">
+            <div className="flex items-center gap-3">
               {socialLinks.map((obj, i) => {
                 const Icon = obj.icon;
                 return (
@@ -70,13 +70,13 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="text-center sm:text-left px-2 sm:px-0">
+          <div className="text-left">
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-3 sm:space-y-2 text-sm">
+            <ul className="space-y-3 text-sm">
               {quickLinks.map((obj, i) => (
                 <li
                   key={i}
-                  className="py-1 hover:text-white transition cursor-pointer"
+                  className="hover:text-white transition cursor-pointer"
                 >
                   <a href={`#${obj.link}`}>{obj.text}</a>
                 </li>
@@ -85,13 +85,13 @@ export default function Footer() {
           </div>
 
           {/* Programs */}
-          <div className="text-center sm:text-left px-2 sm:px-0">
+          <div className="text-left">
             <h3 className="text-white font-semibold mb-4">Programs</h3>
-            <ul className="space-y-3 sm:space-y-2 text-sm">
+            <ul className="space-y-3 text-sm">
               {programs.map((program, i) => (
                 <li
                   key={i}
-                  className="py-1 hover:text-white transition cursor-pointer"
+                  className="hover:text-white transition cursor-pointer"
                 >
                   <Link to={`/program/${program.link}`}>{program.title}</Link>
                 </li>
@@ -100,21 +100,21 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="text-center sm:text-left px-2 sm:px-0">
+          <div className="text-left">
             <h3 className="text-white font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-4 text-sm">
-              <li className="flex items-start justify-center sm:justify-start gap-3">
-                <MapPin size={18} className="text-blue-500 mt-1" />
+              <li className="flex items-start gap-3">
+                <MapPin size={18} className="text-blue-500 mt-1 shrink-0" />
                 <span>
                   Plot 101B, Post Service Housing Estate, Ojo, Lagos, Nigeria
                 </span>
               </li>
-              <li className="flex items-center justify-center sm:justify-start gap-3">
-                <Phone size={18} className="text-blue-500" />
+              <li className="flex items-center gap-3">
+                <Phone size={18} className="text-blue-500 shrink-0" />
                 <span>+234 8150458351</span>
               </li>
-              <li className="flex items-center justify-center sm:justify-start gap-3">
-                <Mail size={18} className="text-blue-500" />
+              <li className="flex items-center gap-3">
+                <Mail size={18} className="text-blue-500 shrink-0" />
                 <span>info@khurizahinnovation.com</span>
               </li>
             </ul>
@@ -125,7 +125,7 @@ export default function Footer() {
         <hr className="border-white/10 my-14" />
 
         {/* Newsletter */}
-        <div className="text-center max-w-2xl mx-auto px-2 sm:px-0">
+        <div className="max-w-2xl mx-auto text-left sm:text-center">
           <h3 className="text-white text-xl sm:text-2xl font-semibold mb-2">
             Stay Updated
           </h3>
@@ -147,10 +147,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-14 flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left text-sm text-gray-400">
+        <div className="mt-14 flex flex-col gap-4 text-sm text-gray-400 text-left sm:text-center md:flex-row md:justify-between md:text-left">
           <p>© 2026 Khurizah Innovation. All rights reserved.</p>
 
-          <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 sm:gap-6">
+          <div className="flex flex-wrap gap-4 sm:gap-6">
             <span className="hover:text-white cursor-pointer">
               Privacy Policy
             </span>
